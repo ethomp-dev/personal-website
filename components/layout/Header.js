@@ -16,13 +16,45 @@ export default () => (
 
                     </li>
 
+                    <li className='navbar-item is-inline-hidden-mobile'>
+
+                        <a href='https://www.instagram.com/elizabeththompson.me' target='_blank'>
+                            <span className='fab fa-instagram'></span>
+                        </a>
+
+                    </li>
+
+                    <li className='navbar-item narrow is-inline-hidden-mobile'>
+
+                        <a href='https://www.behance.net/ethomp54' target='_blank'>
+                            <span className='fab fa-behance'></span>
+                        </a>
+
+                    </li>
+
+                    <li className='navbar-item narrow is-inline-hidden-mobile'>
+
+                        <a href='https://twitter.com/ethomp54' target='_blank'>
+                            <span className='fab fa-twitter'></span>
+                        </a>
+
+                    </li>
+
+                    <li className='navbar-item narrow is-inline-hidden-mobile'>
+
+                        <a href='https://github.com/ethomp54' target='_blank'>
+                            <span className='fab fa-github'></span>
+                        </a>
+
+                    </li>
+
                 </ul>
 
-                <ul className='navbar-group is-hidden-mobile'>
+                <ul className='navbar-group is-flex-hidden-mobile'>
 
                     <li className='navbar-item'>
 
-                        <SmoothLink href='#projects'>Projects</SmoothLink>
+                        <SmoothLink href='#projects'>Portfolio</SmoothLink>
 
                     </li>
 

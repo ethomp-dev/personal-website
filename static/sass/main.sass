@@ -16,7 +16,8 @@ $forty-nine-sd: #69F0AE
 
 $break-mobile: 320px
 $break-tablet: 768px
-$break-laptop: 1200px
+$break-laptop: 1024px
+$break-large-laptop: 1200px
 
 // FONTS
 
@@ -96,7 +97,7 @@ body
     @media screen and (min-width: $break-tablet)
         padding: 0px 120px
 
-    // @media screen and (min-width: $break-laptop)
+    // @media screen and (min-width: $break-large-laptop)
     //     min-width: 1400px
 
 .section
@@ -129,6 +130,48 @@ body
 
                 height: $height * 1px
                 top: $height / 2 * -1px
+
+.flex-container
+    display: flex
+
+    // justify-content: space-between
+    flex-wrap: wrap
+    margin: 0 -15px
+
+    .flex-item
+        margin: 0 15px 30px
+
+        @media screen and (min-width: $break-tablet)
+            flex-basis: calc(50% - 30px)
+
+        @media screen and (min-width: $break-large-laptop)
+            flex-basis: calc(33.33333333% - 30px)
+
+.tile
+    position: relative
+
+    .tile-overlay
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background: white
+        width: 100%
+        height: 100%
+        font-size: 1.3em
+        font-weight: 500
+        transition: 0.3s ease-in-out
+
+    &:hover
+        // box-shadow: 0 0 75px rgba(67, 73, 106, 0.2)
+        cursor: pointer
+
+        .tile-overlay
+            opacity: 1
 
 // .columns
 //     display: flex
@@ -183,6 +226,9 @@ body
             & + .navbar-item
                 margin-left: 40px
 
+                &.narrow
+                    margin-left: 5px
+
 .footer
     background: $primary
     padding: 30px 16px
@@ -222,9 +268,11 @@ div
 
 a
     text-decoration: none
+    cursor: pointer
 
 a:not(.button)
     color: $dark
+    border-bottom: 3px solid transparent
     transition: 0.1s ease-in-out
 
     &:focus,
@@ -381,8 +429,14 @@ textarea
 
 // HELPER STYLES
 
-.is-hidden-mobile
-    display: none
+.is-inline-hidden-mobile
+    display: none !important
+
+    @media screen and (min-width: $break-laptop)
+        display: inline-block !important
+
+.is-flex-hidden-mobile
+    display: none !important
 
     @media screen and (min-width: $break-tablet)
-        display: flex
+        display: flex !important

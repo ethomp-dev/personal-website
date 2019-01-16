@@ -1,10 +1,10 @@
-personal-website
+elizabeththompson.me
 =============================
 
-## Design
+## design
 
 - Sketch, Invision
 
-## Development
+## development
 
 - HTML, Sass, React, Next.js, Node, Express
