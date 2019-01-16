@@ -1,0 +1,26 @@
+{
+  "name": "elizabeththompson.me",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "author": "Elizabeth Thompson",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "export": "next export",
+    "deploy-dev": "surge ./out dev.elizabeththompson.me",
+    "deploy-live": "surge ./out www.elizabeththompson.me"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.18.0",
+    "emailjs-com": "^2.3.2",
+    "express": "^4.15.2",
+    "marked": "^0.5.1",
+    "next": "^7.0.2",
+    "node-sass": "^4.9.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
