@@ -74,6 +74,18 @@ export default () => (
 
                 </ul>
 
+                <ul className='navbar-group is-flex-hidden-desktop'>
+
+                    <li className='navbar-item'>
+
+                        <a className='link' href='https://drive.google.com/open?id=1Yr-zv52iWXGUbBZ3sEPJpKQIhBOLH8Kn' target='_blank'>
+                            Resume
+                        </a>
+
+                    </li>
+
+                </ul>
+
             </nav>
 
         </div>

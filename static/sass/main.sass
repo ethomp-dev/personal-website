@@ -167,9 +167,6 @@ body
         transition: 0.3s ease-in-out
 
     &:hover
-        // box-shadow: 0 0 75px rgba(67, 73, 106, 0.2)
-        cursor: pointer
-
         .tile-overlay
             opacity: 1
 
@@ -204,7 +201,7 @@ body
         top: 0
         z-index: 100
         padding: 0 20px
-        width: 100%
+        width: calc(100% - 40px)
         margin: 0
 
         @media screen and (min-width: $break-tablet)
@@ -279,6 +276,7 @@ a:not(.button)
     &:hover
         border-bottom: 3px solid $dark
 
+a.link,
 .link
     border-bottom: 3px solid $dark
 
@@ -323,38 +321,6 @@ a:not(.button)
         &:hover
             background: $white
             color: $dark
-
-    &.is-frog
-        background: $frog
-        border-color: $frog
-
-        &:hover
-            background: transparent
-            color: $frog
-
-    &.is-tasklog
-        background: $tasklog
-        border-color: $tasklog
-
-        &:hover
-            background: transparent
-            color: $tasklog
-
-    &.is-hci
-        background: $hci
-        border-color: $hci
-
-        &:hover
-            background: transparent
-            color: $hci
-
-    &.is-49sd
-        background: $forty-nine-sd
-        border-color: $forty-nine-sd
-
-        &:hover
-            background: transparent
-            color: $forty-nine-sd
 
 // FORM STYLES
 
@@ -415,18 +381,6 @@ textarea
 .has-text-primary
     color: $primary
 
-.has-text-frog
-    color: $frog
-
-.has-text-tasklog
-    color: $tasklog
-
-.has-text-hci
-    color: $hci
-
-.has-text-49sd
-    color: $forty-nine-sd
-
 // HELPER STYLES
 
 .is-inline-hidden-mobile
@@ -440,3 +394,9 @@ textarea
 
     @media screen and (min-width: $break-tablet)
         display: flex !important
+
+.is-flex-hidden-desktop
+    display: flex !important
+
+    @media screen and (min-width: $break-tablet)
+        display: none !important
