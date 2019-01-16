@@ -12,7 +12,10 @@ export default () => (
 
                     <li className='navbar-item is-title'>
 
-                        <a href='/'>Elizabeth Thompson</a>
+                        <a href='/'>
+                            <span>Elizabeth</span>
+                            <span className='is-inline-hidden-small'>&nbsp;Thompson</span>
+                        </a>
 
                     </li>
 

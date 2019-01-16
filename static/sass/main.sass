@@ -15,6 +15,7 @@ $hci: #4BA173
 $forty-nine-sd: #69F0AE
 
 $break-mobile: 320px
+$break-too-small: 335px
 $break-tablet: 768px
 $break-laptop: 1024px
 $break-large-laptop: 1200px
@@ -383,6 +384,12 @@ textarea
 
 // HELPER STYLES
 
+.is-inline-hidden-small
+    display: none !important
+
+    @media screen and (min-width: $break-too-small)
+        display: inline-block !important
+
 .is-inline-hidden-mobile
     display: none !important
 
@@ -394,6 +401,15 @@ textarea
 
     @media screen and (min-width: $break-tablet)
         display: flex !important
+
+.is-flex-hidden-small-desktop
+    display: none !important
+
+    @media screen and (min-width: $break-too-small)
+        display: flex !important
+
+    @media screen and (min-width: $break-tablet)
+        display: none !important
 
 .is-flex-hidden-desktop
     display: flex !important
