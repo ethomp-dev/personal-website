@@ -3,6 +3,7 @@ import Layout from '../layouts/default'
 import Contact from '../components/generic/Contact'
 import ScrollButton from '../components/generic/ScrollButton'
 import Tile from '../components/generic/Tile'
+import ProjectSection from '../components/custom/ProjectSection'
 
 import * as Constants from '../lib/constants'
 
@@ -16,7 +17,7 @@ export default () => (
 
                 <div>
 
-                    <h1 className='title is-1'>Hi, I'm a designer and developer.</h1>
+                    <h1>Hi, I'm a designer and developer.</h1>
 
                     <p className='subtitle is-flex-hidden-mobile'>Focused on creating web applications with enhanced user experience, currently looking for a full-time role.</p>
 
@@ -31,6 +32,22 @@ export default () => (
                 <div id='projects'>
 
                     <section style={{ paddingTop: '125px' }} className='section'>
+
+                        <span className='eyebrow'>Featured Case Study</span>
+
+                        <div className='flex-container'>
+
+                            <Tile key='unified' isFull data={{
+                                id: 'unified',
+                                src: '/static/img/shots/unified-full.png',
+                                alt: 'Unified',
+                                buttonText: 'View Case Study',
+                                buttonLink: 'https://www.behance.net/gallery/74961437/Unified-Case-Study'
+                            }} />
+
+                        </div>
+
+                        <span style={{ marginTop: '30px' }} className='eyebrow'>Other Works</span>
 
                         <div className='flex-container'>
 

@@ -1,6 +1,6 @@
-export default ({ data }) => (
+export default ({ data, isFull }) => (
 
-    <div className='flex-item tile'>
+    <div className={`flex-item tile ${isFull && 'fullwidth'}`}>
 
         <span className='tile-overlay'>
 

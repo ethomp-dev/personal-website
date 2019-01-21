@@ -29,7 +29,15 @@ export default () => (
 
                     <li className='navbar-item narrow is-inline-hidden-mobile'>
 
-                        <a href='https://www.behance.net/ethomp54' target='_blank'>
+                        <a href='https://www.dribbble.com/elizabeththompson' target='_blank'>
+                            <span className='fab fa-dribbble'></span>
+                        </a>
+
+                    </li>
+
+                    <li className='navbar-item narrow is-inline-hidden-mobile'>
+
+                        <a href='https://www.behance.net/elizabeththompson' target='_blank'>
                             <span className='fab fa-behance'></span>
                         </a>
 
@@ -37,7 +45,7 @@ export default () => (
 
                     <li className='navbar-item narrow is-inline-hidden-mobile'>
 
-                        <a href='https://twitter.com/ethomp54' target='_blank'>
+                        <a href='https://twitter.com/elizabeth_uiux' target='_blank'>
                             <span className='fab fa-twitter'></span>
                         </a>
 
