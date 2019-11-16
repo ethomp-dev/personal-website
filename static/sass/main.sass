@@ -15,8 +15,10 @@ $hci: #4BA173
 $forty-nine-sd: #69F0AE
 
 $break-mobile: 320px
+$break-too-small: 335px
 $break-tablet: 768px
-$break-laptop: 1200px
+$break-laptop: 1024px
+$break-large-laptop: 1200px
 
 // FONTS
 
@@ -96,7 +98,7 @@ body
     @media screen and (min-width: $break-tablet)
         padding: 0px 120px
 
-    // @media screen and (min-width: $break-laptop)
+    // @media screen and (min-width: $break-large-laptop)
     //     min-width: 1400px
 
 .section
@@ -130,6 +132,48 @@ body
                 height: $height * 1px
                 top: $height / 2 * -1px
 
+.flex-container
+    display: flex
+
+    // justify-content: space-between
+    flex-wrap: wrap
+    margin: 0 -15px
+
+    .flex-item
+        margin: 0 15px 30px
+
+        @media screen and (min-width: $break-tablet)
+            flex-basis: calc(50% - 30px)
+
+        @media screen and (min-width: $break-large-laptop)
+            flex-basis: calc(33.33333333% - 30px)
+
+        &.fullwidth
+            flex-basis: 100%
+
+.tile
+    position: relative
+
+    .tile-overlay
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background: white
+        width: 100%
+        height: 100%
+        font-size: 1.3em
+        font-weight: 500
+        transition: 0.3s ease-in-out
+
+    &:hover
+        .tile-overlay
+            opacity: 1
+
 // .columns
 //     display: flex
 //     flex-direction: row
@@ -161,7 +205,7 @@ body
         top: 0
         z-index: 100
         padding: 0 20px
-        width: 100%
+        width: calc(100% - 40px)
         margin: 0
 
         @media screen and (min-width: $break-tablet)
@@ -182,6 +226,9 @@ body
 
             & + .navbar-item
                 margin-left: 40px
+
+                &.narrow
+                    margin-left: 5px
 
 .footer
     background: $primary
@@ -215,6 +262,11 @@ h3
 div
     outline: none
 
+.title
+    font-size: 28px
+    letter-spacing: 2.55px
+    margin-bottom: 10px
+
 .subtitle
     font-size: 28px
     letter-spacing: 2.55px
@@ -222,15 +274,18 @@ div
 
 a
     text-decoration: none
+    cursor: pointer
 
 a:not(.button)
     color: $dark
+    border-bottom: 3px solid transparent
     transition: 0.1s ease-in-out
 
     &:focus,
     &:hover
         border-bottom: 3px solid $dark
 
+a.link,
 .link
     border-bottom: 3px solid $dark
 
@@ -275,38 +330,6 @@ a:not(.button)
         &:hover
             background: $white
             color: $dark
-
-    &.is-frog
-        background: $frog
-        border-color: $frog
-
-        &:hover
-            background: transparent
-            color: $frog
-
-    &.is-tasklog
-        background: $tasklog
-        border-color: $tasklog
-
-        &:hover
-            background: transparent
-            color: $tasklog
-
-    &.is-hci
-        background: $hci
-        border-color: $hci
-
-        &:hover
-            background: transparent
-            color: $hci
-
-    &.is-49sd
-        background: $forty-nine-sd
-        border-color: $forty-nine-sd
-
-        &:hover
-            background: transparent
-            color: $forty-nine-sd
 
 // FORM STYLES
 
@@ -367,22 +390,37 @@ textarea
 .has-text-primary
     color: $primary
 
-.has-text-frog
-    color: $frog
-
-.has-text-tasklog
-    color: $tasklog
-
-.has-text-hci
-    color: $hci
-
-.has-text-49sd
-    color: $forty-nine-sd
-
 // HELPER STYLES
 
-.is-hidden-mobile
-    display: none
+.is-inline-hidden-small
+    display: none !important
+
+    @media screen and (min-width: $break-too-small)
+        display: inline-block !important
+
+.is-inline-hidden-mobile
+    display: none !important
+
+    @media screen and (min-width: $break-laptop)
+        display: inline-block !important
+
+.is-flex-hidden-mobile
+    display: none !important
 
     @media screen and (min-width: $break-tablet)
-        display: flex
+        display: flex !important
+
+.is-flex-hidden-small-desktop
+    display: none !important
+
+    @media screen and (min-width: $break-too-small)
+        display: flex !important
+
+    @media screen and (min-width: $break-tablet)
+        display: none !important
+
+.is-flex-hidden-desktop
+    display: flex !important
+
+    @media screen and (min-width: $break-tablet)
+        display: none !important

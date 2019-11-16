@@ -1,9 +1,10 @@
 import Layout from '../layouts/default'
 
-import ProjectSection from '../components/custom/ProjectSection'
-import ProjectListing from '../components/custom/ProjectListing'
-import ScrollButton from '../components/generic/ScrollButton'
 import Contact from '../components/generic/Contact'
+import ScrollButton from '../components/generic/ScrollButton'
+import Tile from '../components/generic/Tile'
+import ProjectSection from '../components/custom/ProjectSection'
+
 import * as Constants from '../lib/constants'
 
 export default () => (
@@ -16,11 +17,11 @@ export default () => (
 
                 <div>
 
-                    <h1 className='title is-1'>Hi, I'm a designer and developer.</h1>
+                    <h1>Hi, I'm a designer and developer.</h1>
 
-                    <p className='subtitle is-hidden-mobile'>Studying Human-Computer Interaction at UNC Charlotte and working as a frontend developer, I'm a tenacious problem solver and love to learn new things</p>
+                    <p className='subtitle is-flex-hidden-mobile'>Focused on creating beautifully crafted web applications with enhanced user experiences</p>
 
-                    <ScrollButton text='Explore Projects' />
+                    <ScrollButton text='Explore Portfolio' />
 
                 </div>
 
@@ -30,50 +31,31 @@ export default () => (
 
                 <div id='projects'>
 
-                    {Constants.PROJECTS.map((project, index) => (
+                    <section style={{ paddingTop: '125px' }} className='section'>
 
-                        <ProjectSection
-                            index={index}
-                            key={project.id}
-                            isReversed={index % 2 !== 0 ? true : false}
-                            content={{
-                                caseNumber: '0' + project.number,
-                                caseTotal: '0' + Constants.NUM_PROJECTS,
-                                ...project
-                            }}
-                        />
+                        <span className='eyebrow'>Featured Case Study</span>
 
-                    ))}
+                        <div className='flex-container'>
 
-                    <section className='section is-hero has-bar is-centered is-hidden-mobile'>
+                            <Tile key='unified' isFull data={{
+                                id: 'unified',
+                                src: '/static/img/shots/unified-full.png',
+                                alt: 'Unified',
+                                buttonText: 'View Case Study',
+                                buttonLink: 'https://www.behance.net/gallery/74961437/Unified-Case-Study'
+                            }} />
 
-                        <div>
+                        </div>
 
-                            <h2>Other Web Projects</h2>
+                        <span style={{ marginTop: '30px' }} className='eyebrow'>Other Works</span>
 
-                            <br />
+                        <div className='flex-container'>
 
-                            <div style={{ display: 'inline-flex', flexDirection: 'column' }}>
+                            {Constants.PROJECTS.map((project) => (
 
-                                <ProjectListing
-                                    title="CCI Dean's Ambassador Program"
-                                    url='https://ccidap.com'
-                                    codeUrl='https://github.com/ccidap/dap-website'
-                                />
+                                <Tile key={project.id} data={project} />
 
-                                <ProjectListing
-                                    title='ABC Tracker'
-                                    url='http://abctracker.org'
-                                    codeUrl=''
-                                />
-
-                                <ProjectListing
-                                    title='Soft Touch Flowers'
-                                    url='http://softtouchflowersandgifts.com'
-                                    codeUrl=''
-                                />
-
-                            </div>
+                            ))}
 
                         </div>
 
@@ -81,7 +63,7 @@ export default () => (
 
                 </div>
 
-                <section style={{ paddingTop: '250px', paddingBottom: '100px' }} className='section has-bar'>
+                <section style={{ paddingTop: '150px', paddingBottom: '100px' }} className='section'>
 
                     <h2 className='has-text-centered'>Contact Me</h2>
 
