@@ -19,7 +19,7 @@ export default () => (
 
                     <h1>Hi, I'm a designer and developer.</h1>
 
-                    <p className='subtitle is-flex-hidden-mobile'>Focused on creating beautifully architected web applications with enhanced user experience</p>
+                    <p className='subtitle is-flex-hidden-mobile'>Focused on creating beautifully crafted web applications with enhanced user experiences</p>
 
                     <ScrollButton text='Explore Portfolio' />
 
