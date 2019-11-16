@@ -1,10 +1,8 @@
-elizabeththompson.me
+Hello 👋
 =============================
 
-## design
+Welcome to my personal website.
 
-- Sketch, Invision
+This application was designed and handcrafted by me using HTML, Sass, React, Next.js, and Node.js.
 
-## development
-
-- HTML, Sass, React, Next.js, Node, Express
+If you notice any typos, a11y issues, or bugs please submit a PR or reach out to me directly.
