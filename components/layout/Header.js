@@ -1,5 +1,7 @@
 import SmoothLink from '../generic/SmoothLink'
 
+import * as CONSTANTS from '../../constants'
+
 export default () => (
 
     <header>
@@ -21,40 +23,40 @@ export default () => (
 
                     <li className='navbar-item is-inline-hidden-mobile'>
 
-                        <a href='https://www.instagram.com/elizabeththompson.me' target='_blank'>
-                            <span className='fab fa-instagram'></span>
+                        <a href={CONSTANTS.PROFILES.INSTAGRAM} target='_blank' title='Instagram profile'>
+                            <span className='fab fa-instagram' aria-hidden></span>
                         </a>
 
                     </li>
 
                     <li className='navbar-item narrow is-inline-hidden-mobile'>
 
-                        <a href='https://www.dribbble.com/elizabeththompson' target='_blank'>
-                            <span className='fab fa-dribbble'></span>
+                        <a href={CONSTANTS.PROFILES.DRIBBBLE} target='_blank' title='Dribbble profile'>
+                            <span className='fab fa-dribbble' aria-hidden></span>
                         </a>
 
                     </li>
 
                     <li className='navbar-item narrow is-inline-hidden-mobile'>
 
-                        <a href='https://www.behance.net/elizabeththompson' target='_blank'>
-                            <span className='fab fa-behance'></span>
+                        <a href={CONSTANTS.PROFILES.BEHANCE} target='_blank' title='Behance profile'>
+                            <span className='fab fa-behance' aria-hidden></span>
                         </a>
 
                     </li>
 
                     <li className='navbar-item narrow is-inline-hidden-mobile'>
 
-                        <a href='https://twitter.com/elizabeth_uiux' target='_blank'>
-                            <span className='fab fa-twitter'></span>
+                        <a href={CONSTANTS.PROFILES.TWITTER} target='_blank' title='Twitter profile'>
+                            <span className='fab fa-twitter' aria-hidden></span>
                         </a>
 
                     </li>
 
                     <li className='navbar-item narrow is-inline-hidden-mobile'>
 
-                        <a href='https://github.com/ethomp54' target='_blank'>
-                            <span className='fab fa-github'></span>
+                        <a href={CONSTANTS.PROFILES.GITHUB} target='_blank' title='Github profile'>
+                            <span className='fab fa-github' aria-hidden></span>
                         </a>
 
                     </li>
@@ -77,7 +79,7 @@ export default () => (
 
                     <li className='navbar-item'>
 
-                        <a className='button is-outline' href='https://drive.google.com/open?id=1Yr-zv52iWXGUbBZ3sEPJpKQIhBOLH8Kn' target='_blank'>
+                        <a className='button is-outline' href={CONSTANTS.PROFILES.RESUME} target='_blank'>
                             View Resume
                         </a>
 
@@ -89,7 +91,7 @@ export default () => (
 
                     <li className='navbar-item'>
 
-                        <a className='link' href='https://drive.google.com/open?id=1Yr-zv52iWXGUbBZ3sEPJpKQIhBOLH8Kn' target='_blank'>
+                        <a className='link' href={CONSTANTS.PROFILES.RESUME} target='_blank'>
                             Resume
                         </a>
 
